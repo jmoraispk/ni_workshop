@@ -1,6 +1,10 @@
 # NI Workshop instructions
 
 ```bash
+## Step 0 - Get Dockerfile & script to install dependencies
+git clone https://github.com/jmoraispk/ni_workshop.git
+cd ni_workshop
+
 # Step 1 - build container
 docker build -f Dockerfile -t ettus_workshop .
 
