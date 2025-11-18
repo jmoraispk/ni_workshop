@@ -1,7 +1,7 @@
-## Step 0 - Download the Dockerfile & script to install workshop dependencies
-...
+# NI Workshop instructions
 
-## Step 1 - build container
+```bash
+# Step 1 - build container
 docker build -f Dockerfile -t ettus_workshop .
 
 ## Step 2 - start container
@@ -13,5 +13,6 @@ chmod +x setup_ettus_workshop.sh
 
 # Other Docker Commands (Recover or Clean up container)
 docker ps -a
-docker start -ai <container-name>   # start the container again, if it exited (keeps packages)
-docker rm <container-name>
+docker start -ai <container_name>   # start the container again, if it exited (keeps packages)
+docker rm <container_name>
+```
