@@ -59,11 +59,8 @@ mkdir -p "$HOME/workarea"
 # Step 7: Download workshop materials
 #-----------------------------
 echo ">>> Downloading workshop materials and slides..."
-wget -P "$HOME/workarea" \
-  https://kb.ettus.com/images/a/ab/Workshop_GnuRadio_Materials_20171212.tar.gz
-
-wget -P "$HOME/workarea" \
-  https://kb.ettus.com/images/f/fd/Workshop_GnuRadio_Slides_20250802.pdf
+wget -P "$HOME/workarea" https://kb.ettus.com/images/a/ab/Workshop_GnuRadio_Materials_20171212.tar.gz
+wget -P "$HOME/workarea" https://kb.ettus.com/images/f/fd/Workshop_GnuRadio_Slides_20250802.pdf
 
 #-----------------------------
 # Step 8: Unpack materials
@@ -98,9 +95,6 @@ cmake ../
 make -j"$(nproc)"
 sudo make install
 sudo ldconfig
-
-echo ">>> Downloading USRP FPGA images..."
-sudo uhd_images_downloader
 
 echo ">>> Downloading USRP FPGA images..."
 sudo uhd_images_downloader
